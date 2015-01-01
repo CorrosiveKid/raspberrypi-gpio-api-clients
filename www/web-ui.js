@@ -20,7 +20,7 @@ function buildHTML(){
     // var pins = getPinStatusTest();
     pins.forEach(function(pin) {
         var $listItem = $("<li class='ui-grid-a'></li>");
-        var $label = $("<label class='ui-block-a custom-label' for='flip-select-"+ pin.pin_number +"'>" + pin.pin_name + "</label>");
+        var $label = $("<label id='label-for-" + pin.pin_number + "' class='ui-block-a custom-label' for='flip-select-"+ pin.pin_number +"'>" + pin.pin_name + "</label>");
         var $select = $("<select id='flip-select-" + pin.pin_number + "' data-role='slider' pin-number='" + pin.pin_number + "' name='flip-select-" + pin.pin_number + "' class='flipswitch ui-block-b'></select>");
         var $optionOn = $("<option>On</option>");
         var $optionOff = $("<option>Off</option>");
@@ -79,19 +79,43 @@ function getPinStatusTest(){
 
     var object2 = {
         "pin_number": 1,
-        "pin_name": "Xbox 360",
+        "pin_name": "TV",
         "value": 0
     };
 
     var object3 = {
         "pin_number": 2,
-        "pin_name": "Xbox 360 Slim",
+        "pin_name": "HDMI Switcher",
         "value": 0
     };
 
     var object4 = {
         "pin_number": 3,
+        "pin_name": "Dialog TV",
+        "value": 0
+    };
+
+    var object5 = {
+        "pin_number": 4,
         "pin_name": "Fan",
+        "value": 1
+    };
+
+    var object6 = {
+        "pin_number": 5,
+        "pin_name": "Xbox 360",
+        "value": 0
+    };
+
+    var object7 = {
+        "pin_number": 6,
+        "pin_name": "Xbox 360 Slim",
+        "value": 0
+    };
+
+    var object8 = {
+        "pin_number": 7,
+        "pin_name": "Lamp",
         "value": 1
     };
     
@@ -99,6 +123,10 @@ function getPinStatusTest(){
     pinList.push(object2);
     pinList.push(object3);
     pinList.push(object4);
+    pinList.push(object5);
+    pinList.push(object6);
+    pinList.push(object7);
+    pinList.push(object8);
     
     var data = {
         "data": pinList
