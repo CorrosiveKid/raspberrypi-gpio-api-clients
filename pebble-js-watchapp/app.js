@@ -1,4 +1,4 @@
-var debug = true;
+var debug = false;
 
 var UI = require('ui');
 var ajax = require('ajax');
