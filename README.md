@@ -8,4 +8,8 @@ This client application is developed as a cross platform application using JQuer
 ## Pebble Watch Client ##
 This is a Pebble watch app developed using pebble.js. Currently, the Raspberry Pi IP address is hard-coded, change it according to your IP address and build the project on your Pebble watch to test it out.
 
+## Future Tasks ##
+* Remove hard-coded configuration variables and setup settings views for all clients.
+* Add more clients (Android Wear app, Android native app, iOS native app).
+
 Note: I'm planning to update the code to remove the hard-coded IP addresses and add settings pages to add the values from the applications itself in the future.
