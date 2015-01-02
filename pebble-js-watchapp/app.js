@@ -23,6 +23,19 @@ else{
   menu.show();
 }
 
+setInterval(function(){
+  if(debug){
+    menu.item(0, 0, {title: 'Audio System', subtitle: 'On', test: 'test'});
+    menu.item(0, 1, {title: 'Fan', subtitle: 'Off', test: 'test'});
+    menu.item(0, 2, {title: 'Lamp', subtitle: 'Off', test: 'test'});
+    menu.item(0, 3, {title: 'TV', subtitle: 'On', test: 'test'});
+    menu.item(0, 4, {title: 'Xbox 360', subtitle: 'On', test: 'test'});
+  }
+  else{
+    buildUI();
+  }
+}, 30000);
+
 menu.on('select', function(e){
   var currentValue = e.item.subtitle;
   var newValue;
@@ -71,10 +84,16 @@ function setPinStatus(pinNumber, value){
     ajax(
       {
         url: apiEndpoint,
-        type: 'POST',
+        method: 'POST',
         async: false,
         data: postData,
         cache: false,
+      },
+      function (responseData){
+        data = responseData;
+      },
+      function (error){
+        console.log('The AJAX request failed: ' + error);
       }
     );
 
