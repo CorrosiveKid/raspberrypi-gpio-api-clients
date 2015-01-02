@@ -1,6 +1,6 @@
 # Raspberry Pi GPIO API Client #
 
-This repository currently contains two client projects to use the [Raspberry Pi GPIO API](https://bitbucket.org/CorrosiveKid/raspberrypi-gpio-api) in order to control GPIO pins of a Raspberry Pi with your Mobile Phone or Smart Watch. 
+This repository currently contains two client projects to use the [Raspberry Pi GPIO API](https://github.com/CorrosiveKid/raspberrypi-gpio-api) in order to control GPIO pins of a Raspberry Pi with your Mobile Phone or Smart Watch. 
 
 ## PhoneGap Client ##
 This client application is developed as a cross platform application using JQuery mobile. Currently, the Raspberry PI IP address is hard-coded, change it according to your IP address and import it as an existing PhoneGap project or build your own Android/iOS/Windows Phone client using http://build.phonegap.com/
